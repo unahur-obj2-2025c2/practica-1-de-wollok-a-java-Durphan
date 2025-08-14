@@ -28,6 +28,10 @@ public class Usuario {
         listaContenido.add(contenido);
     }
 
+    public void vaciarContenido() {
+        listaContenido.clear();
+    }
+
     public Usuario(IPlan plan, List<Contenido> listaContenido) {
         this.plan = plan;
         this.listaContenido = listaContenido;

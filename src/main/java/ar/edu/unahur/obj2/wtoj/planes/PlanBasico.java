@@ -16,11 +16,12 @@ public class PlanBasico implements IPlan {
 
     public Double costoPlan(Usuario usuario) {
         List<Contenido> contenidoUsuario = usuario.getListaContenido();
-        List<Contenido> excedentes = contenidoUsuario.subList(limite, contenidoUsuario.size());
         if (limite >= contenidoUsuario.size()) {
             return costoBase;
         } else {
-            return costoBase + excedentes.stream().mapToDouble(Contenido::costo).sum();
+            List<Contenido> excedentes = contenidoUsuario.subList(limite, contenidoUsuario.size());
+            Double costoExcedentes = excedentes.stream().mapToDouble(Contenido::costo).sum();
+            return costoBase + costoExcedentes;
         }
 
     }

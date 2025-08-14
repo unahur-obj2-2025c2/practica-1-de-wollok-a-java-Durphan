@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Serie extends Contenido {
     private List<Temporada> listaTemporadas = new ArrayList<>();
-    private String titulo;
 
     public Serie(String titulo, Double costoBase, List<Temporada> listaTemporadas) {
         super(titulo, costoBase);
@@ -18,10 +17,6 @@ public class Serie extends Contenido {
 
     public void agregarTemporada(Temporada nuevaTemporada) {
         listaTemporadas.add(nuevaTemporada);
-    }
-
-    public String getTitulo() {
-        return titulo;
     }
 
     @Override

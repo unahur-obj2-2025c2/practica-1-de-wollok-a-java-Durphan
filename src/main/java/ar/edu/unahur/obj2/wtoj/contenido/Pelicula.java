@@ -8,6 +8,6 @@ public class Pelicula extends Contenido {
 
     @Override
     protected Double doCosto() {
-        return 0.0;
+        return 1.0;
     }
 }

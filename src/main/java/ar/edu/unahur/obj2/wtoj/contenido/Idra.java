@@ -2,7 +2,15 @@ package ar.edu.unahur.obj2.wtoj.contenido;
 
 public class Idra {
     private Double valor = 0.5;
-    public static final Idra instance = new Idra();
+    private static final Idra instance = new Idra();
+
+    private Idra() {
+        // Private constructor to prevent instantiation
+    }
+
+    public static Idra getInstance() {
+        return instance;
+    }
 
     public double getValor() {
         return valor;
@@ -11,13 +19,4 @@ public class Idra {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-    private Idra() {
-
-    }
-
-    public static Idra getInstance() {
-        return instance;
-    }
-
 }

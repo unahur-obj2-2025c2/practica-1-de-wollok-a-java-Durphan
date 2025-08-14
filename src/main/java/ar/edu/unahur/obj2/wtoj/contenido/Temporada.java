@@ -29,7 +29,7 @@ public class Temporada {
     }
 
     protected Double costo() {
-        return listaEpisodios.stream().mapToDouble((episodio -> episodio.getCosto())).average().orElse(0.0)
+        return listaEpisodios.stream().mapToDouble(Episodio::getCosto).average().orElse(0.0)
                 / listaEpisodios.stream().count();
     }
 
