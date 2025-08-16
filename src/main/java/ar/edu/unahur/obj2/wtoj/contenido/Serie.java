@@ -21,7 +21,7 @@ public class Serie extends Contenido {
 
     @Override
     protected Double doCosto() {
-        return listaTemporadas.stream().mapToDouble(Temporada::costo).average().orElse(0.0)
+        return listaTemporadas.stream().mapToDouble(Temporada::doCosto).average().orElse(0.0)
                 / listaTemporadas.stream().count();
     }
 }

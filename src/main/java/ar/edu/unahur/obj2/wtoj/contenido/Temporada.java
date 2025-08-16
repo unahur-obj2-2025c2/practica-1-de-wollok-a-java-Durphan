@@ -28,9 +28,8 @@ public class Temporada {
         listaEpisodios.add(nuevoEpisodio);
     }
 
-    protected Double costo() {
-        return listaEpisodios.stream().mapToDouble(Episodio::getCosto).average().orElse(0.0)
-                / listaEpisodios.stream().count();
+    protected Double doCosto() {
+        return listaEpisodios.stream().mapToDouble(Episodio::getCosto).average().orElse(0.0);
     }
 
 }
